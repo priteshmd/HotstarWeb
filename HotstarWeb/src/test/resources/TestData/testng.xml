@@ -1,6 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-  <test thread-count="5" name="Test">
-  </test> <!-- Test -->
+<suite name="Suite" parallel="false" thread-count="5">
+	<test thread-count="5" name="Test1" parallel="false">
+		<classes>
+			<class name="com.hotstar.Tests.HomePageTest">
+				<methods>
+					<parameter name="lang" value="Hindi">
+						<include name="Test06">
+						</include>
+					</parameter>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test thread-count="5" name="Test2" parallel="false">
+		<classes>
+			<class name="com.hotstar.Tests.HomePageTest">
+				<methods>
+					<parameter name="lang" value="Kannada">
+						<include name="Test06">
+						</include>
+					</parameter>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test thread-count="5" name="Test3" parallel="false">
+		<classes>
+			<class name="com.hotstar.Tests.HomePageTest">
+				<methods>
+					<parameter name="lang" value="Marathi">
+						<include name="Test06">
+						</include>
+					</parameter>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test thread-count="5" name="Test4" parallel="false">
+		<classes>
+			<class name="com.hotstar.Tests.HomePageTest">
+				<methods>
+					<include name="Test06">
+					</include>
+				</methods>
+
+			</class>
+		</classes>
+	</test> <!-- Test -->
 </suite> <!-- Suite -->
